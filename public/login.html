@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration/Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 300px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- User Login Form -->
+    <h2>Login</h2>
+    <form action="http://localhost:5000/api/v1/users/login" method="post">
+        <label for="loginUsername">Username</label>
+        <input type="text" id="loginUsername" name="username" required>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <div>
+        <a href="index.html"><h1>redirect to register</h1></a>
+        <a href="logout.html"><h1>redirect  to login</h1></a>
+        <a href="post.html"><h1>redirect to create post</h1></a>
+    </div>
+
+
+</body>
+</html>
